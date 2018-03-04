@@ -2,7 +2,7 @@
 The Rocket Ignition system is a custom printed circuit board to handle the sequential launch of up to 5 smoke rockets from an rc plan. On ground, the system prevents accidental launch of the smoke rockets with some security features, such as an RC release switch and a hard wired dip switch. 
 Once in the air, the pilot will release the power relais by triggering an rc switch (ch2) and then, whenver he wants to launch a smoke rocket, by triggering the realease switch (ch1). The system will open the approriate relais, making sure all security checks are passed beforehand. 
 
-[[Rocket_Ignition/images/rocketIgninter_Pin_Schema.png]]
+(github/oroant/Rocket_Ignition/images/rocketIgninter_Pin_Schema.png)
 
 
 ## Requirements
