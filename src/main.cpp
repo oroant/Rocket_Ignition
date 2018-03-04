@@ -5,6 +5,7 @@
 const int pwrPin = 5;
 const int ledPin = 3;
 
+// some variables
 int pwm_signal = 880;
 int counter = 0;
 
