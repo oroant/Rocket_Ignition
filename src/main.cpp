@@ -10,10 +10,8 @@ int pwm_signal = 880;
 int counter = 0;
 
 Flasher led(13, 550, 250);
-Flasher pwrLed(14,1000,500);
 
 void setup() {
-   
     Serial.begin(9600);
 }
 
@@ -38,7 +36,6 @@ void loop() {
     }
 
     led.Update();
-    pwrLed.Update();
     Serial.println("Hallo");
 
 }
