@@ -3,6 +3,7 @@
  * Class and pin definitions for the various relais
  */
 
+
 #include <Arduino.h>
 
 //Pins - Hardware mapping
@@ -18,9 +19,6 @@ class Relais {
     // Class Member Variables
     int relaisPin; // pin number for relais
     int relaisStatus; //status of relais 0=off, 1=ready/armed, 2=fired
-    unsigned long previousMillis;  	// will store last time relais was updated
-    unsigned long fireTime;  //time, wenn relais was switch the armed (status 1)
-
 
     // Constructor - creates a Relais
     // and initializes the member variables and state
@@ -33,10 +31,22 @@ public:
         relaisPin = pin;
         pinMode(relaisPin, OUTPUT);
         digitalWrite(relaisPin, LOW); //set the relais to off
-        relaisStatus = 0; //set the status to off=0
-        previousMillis = 0;
+        relaisStatus = 0;  //set the status to off=0
     }
     
+    // Relais: ON
+    void on(){
+        digitalWrite(relaisPin, HIGH);
+        delay(100);
+    }
+
+   // Relais: OFF
+    void off(){
+        digitalWrite(relaisPin, LOW);
+        delay(100); 
+    }
+
+    // TODO: update function
     void update()
     { /*    update relais
             Set the time fire ready status was set. Used
@@ -47,6 +57,7 @@ public:
        
     }
 
+    // TODO: implent function when rocket is fired
     void fire()
     {
         // make sure, relais is on for 5s (5000ms)

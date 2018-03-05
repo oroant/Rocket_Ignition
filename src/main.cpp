@@ -13,24 +13,50 @@ Version:    2018-03-05
 #include <Arduino.h>
 #include <Flasher.h>
 #include <Relais.h>
-
+#include <Messages.h>
 
 // Relais
+Relais pwrRelais(pwrPin);
 Relais rocket_1(rocketPin_1);
+Relais rocket_2(rocketPin_2);
 
+// some LEDs
+Flasher onBoard(13);            // onBoard LED
+Flasher errorLED(redPin);   // red LED pin for Error
+Flasher externalLED(bluePin); // blue LED for external switch
 
-// some variables
+// some test variables
 int pwm_signal = 880;
-int counter = 0;
-
-Flasher led(13, 550, 250);
 
 // Setup
 void setup() {
     Serial.begin(9600);
+    
+    //Starting
+    printMsg(startMessage);
+    onBoard.on(); 
+    errorLED.on();
+    externalLED.on();
+
+    //Init of rocket channels
+    printMsg(initMessage);
+    pwrRelais.off();
+    rocket_1.on(); 
+    rocket_2.on(); 
+    
+    delay(100);
+    rocket_1.off();
+    rocket_2.off();
+    delay(100);
+
+    //TODO: blinking of Software Version
+
+    // Everything ready
+    printMsg(readyMessage);
 }
 
 // Loop
 void loop() {
-
+    
+    onBoard.blinking(500, 250, 5);
 }
