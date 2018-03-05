@@ -10,7 +10,6 @@ const int redPin = 7;   // red LED for errors
 const int greenPin = 6; // green LED for Ignition ready
 const int bluePin = 4;  // blue LED for external switch/bridge
 
-
 // Class Definition 
 class Flasher
 {
