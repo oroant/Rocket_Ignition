@@ -21,7 +21,7 @@ Relais rocket_1(rocketPin_1);
 Relais rocket_2(rocketPin_2);
 
 // some LEDs
-Flasher onBoard(13);            // onBoard LED
+Flasher onBoard(13);  // onBoard LED
 Flasher errorLED(redPin);   // red LED pin for Error
 Flasher externalLED(bluePin); // blue LED for external switch
 
