@@ -1,4 +1,10 @@
+/**
+ * Led Header File
+ * Class and pin definitions for the various leds used in circuit
+ */
 #include <Arduino.h>
+
+// TODO: update complete class to suit project
 
 class Flasher
 {
