@@ -4,7 +4,7 @@
  */
 #include <Arduino.h>
 
-// TODO: update complete class to suit project
+// TODO: update complete class to fit project requirements
 
 class Flasher
 {
@@ -33,7 +33,7 @@ class Flasher
 	previousMillis = 0;
   }
 
-  void Update()
+  void update()
   {
     // check to see if it's time to change the state of the LED
     unsigned long currentMillis = millis();

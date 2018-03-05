@@ -16,12 +16,7 @@ Version:    2018-03-05
 
 
 // Relais
-Relais pwrRelais(pwrPin);
 Relais rocket_1(rocketPin_1);
-Relais rocket_2(rocketPin_2);
-Relais rocket_3(rocketPin_3);
-Relais rocket_4(rocketPin_4);
-Relais rocket_5(rocketPin_5);
 
 
 // some variables
@@ -37,6 +32,5 @@ void setup() {
 
 // Loop
 void loop() {
-
 
 }
